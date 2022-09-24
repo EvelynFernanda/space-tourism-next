@@ -1,0 +1,23 @@
+.navbar_container {
+  display: flex;
+  max-width: 1385px;
+  height: 8rem;
+  margin: 0 auto;
+  padding-top: 2.5rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar_items {
+  background-color: rgba(133, 129, 129, 0.308);
+  display: flex;
+  padding: 2rem;
+  justify-content: space-around;
+  width: 60%;
+  & > li {
+    font-size: 1rem;
+    font-family: "Barlow Condensed", sans-serif;
+    line-height: 19px;
+    letter-spacing: 2.7px;
+  }
+}
