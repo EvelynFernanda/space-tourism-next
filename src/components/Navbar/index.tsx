@@ -1,15 +1,16 @@
 import styles from "./styles.module.scss";
 import LogoSvg from "../../assets/shared/logo-svg.svg";
+import Link from "next/link";
 
 const Navbar = () => {
   return (
     <div className={styles.navbar_container}>
     <LogoSvg />
       <ul className={styles.navbar_items}>
-        <li><a href="/">HOME</a></li>
-        <li><a href="/">DESTINATION</a></li>
-        <li><a href="/">CREW</a></li>
-        <li><a href="/">TECHNOLOGY</a></li>
+        <li><Link href="/" >HOME</Link></li>
+        <li><Link href="/">DESTINATION</Link></li>
+        <li><Link href="/">CREW</Link></li>
+        <li><Link href="/">TECHNOLOGY</Link></li>
       </ul>
     </div>
   );
