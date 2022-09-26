@@ -1,0 +1,15 @@
+@import "../../styles/variables.scss";
+
+.destinationInformation {
+  width: 445px;
+  &_nav {
+    display: flex;
+
+    &_button {
+      background: none;
+      border: none;
+      color: $light;
+      cursor: pointer;
+    }
+  }
+}

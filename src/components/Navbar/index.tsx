@@ -8,7 +8,7 @@ const Navbar = () => {
     <LogoSvg />
       <ul className={styles.navbar_items}>
         <li><Link href="/" >HOME</Link></li>
-        <li><Link href="/">DESTINATION</Link></li>
+        <li><Link href="/destination/">DESTINATION</Link></li>
         <li><Link href="/">CREW</Link></li>
         <li><Link href="/">TECHNOLOGY</Link></li>
       </ul>

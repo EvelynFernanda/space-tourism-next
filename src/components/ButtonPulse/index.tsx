@@ -6,7 +6,7 @@ type ButtonPulse={
 }
 const ButtonPulse = ({children}: ButtonPulse) => {
   return (
-    <a href="/" className={styles.pulse_button}>
+    <a href="/destination" className={styles.pulse_button}>
       {children}
     </a>
   );
