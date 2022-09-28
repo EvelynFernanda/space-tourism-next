@@ -2,7 +2,7 @@ import data from "../../api/data.json";
 
 import styles from "./styles.module.scss";
 
-type destinationInformationType = {
+export type destinationInformationType = {
   destinationState: string;
   useDestinationState: (arg: string) => void;
 };
@@ -16,6 +16,16 @@ const DestinationInformation = ({
       <div className={styles.destinationInformation_nav}>
         {data.destinations.map((destination) => (
           <button
+            style={
+              destinationState == destination.name
+                ? {
+                    borderBottomColor: "white",
+                  }
+                : {
+                    color: "#D0D6F9",
+                    borderBottomColor: "transparent",
+                  }
+            }
             className={styles.destinationInformation_nav_button}
             value={destination.name}
             onClick={(event) => useDestinationState(event.currentTarget.value)}
@@ -26,16 +36,25 @@ const DestinationInformation = ({
       </div>
       {data.destinations.map((destination) => (
         <div
+          className={styles.destinationInformation_content}
           style={
             destinationState == destination.name
               ? { display: "initial" }
               : { display: "none" }
           }
         >
-          <p>{destination.name}</p>
-          <p>{destination.description}</p>
-          <p>{destination.distance}</p>
-          <p>{destination.travel}</p>
+          <h2>{destination.name.toUpperCase()}</h2>
+          <h3>{destination.description}</h3>
+          <div className={styles.destinationInformation_content_distance}>
+            <div className={styles.destinationInformation_content_distance_item}>
+              <h5>AVG. DISTANCE</h5>
+              <p>{destination.distance}</p>
+            </div>
+            <div className={styles.destinationInformation_content_distance_item}>
+            <h5>Est. travel time</h5>
+              <p>{destination.travel}</p>
+            </div>
+          </div>
         </div>
       ))}
     </div>

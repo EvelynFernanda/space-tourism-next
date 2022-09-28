@@ -1,6 +1,7 @@
 @import "../../styles/variables.scss";
 
 .destinationInformation {
+  margin-top: 6rem;
   width: 445px;
   &_nav {
     display: flex;
@@ -10,6 +11,59 @@
       border: none;
       color: $light;
       cursor: pointer;
+      font-size: 1rem;
+      font-family: $sans;
+      line-height: 19px;
+      letter-spacing: 2.7px;
+      transition: hover 0.5s;
+      padding: 0 0.3rem 0.5rem;
+      margin: 0 10px;
+      border-bottom: 3px solid transparent;
+      &:hover {
+        border-bottom-color: gray !important;
+      }
+    }
+  }
+  &_content {
+    h2 {
+      font-family: $serif;
+      font-weight: 400;
+      font-size: 100px;
+      line-height: 1px;
+    }
+    h3 {
+      font-family: $sans;
+      color: #d0d6f9;
+      font-size: 1.125rem;
+      line-height: 18px;
+      letter-spacing: 2px;
+      line-height: 25px;
+      font-weight: 400;
+      padding-bottom: 2.5rem;
+      border-bottom: 2px solid rgba(122, 121, 121, 0.289);
+    }
+    &_distance {
+      display: flex;
+      &_item {
+        margin-right: 3rem;
+        p {
+          font-family: $serif;
+          font-weight: 400;
+          font-size: 28px;
+          line-height: 32px;
+          text-transform: uppercase;
+          margin-top: 10px;
+        }
+        h5 {
+          margin: 0;
+          font-family: $sans;
+          color: #d0d6f9;
+          font-size: 1rem;
+          line-height: 18px;
+          letter-spacing: 2px;
+          font-weight: 400;
+        }
+      }
     }
   }
 }

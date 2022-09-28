@@ -25,22 +25,11 @@ const Destination: NextPage = () => {
       className={styles.destination}
       style={{ backgroundImage: `url(${bgDesktop.src})` }}
     >
-      <Navbar />
+      <Navbar  />
       <FadeIn>
         <main className={styles.destination_container}>
           <div className={styles.destination_content}>
             <h1>Pick your destination</h1>
-            {data.destinations.map((destination) => (
-              <div
-                style={
-                  destinationState == destination.name
-                    ? { display: "initial" }
-                    : { display: "none" }
-                }
-                className={styles.image}
-              >
-              </div>
-            ))}
             {destinationState == "Moon" && <Image src={moon} alt="moon" height={420} width={420} />}
             {destinationState == "Mars" && <Image src={mars} alt="mars" height={420} width={420} />}
             {destinationState == "Europa" && <Image src={europa} alt="europa" height={420} width={420} />}
