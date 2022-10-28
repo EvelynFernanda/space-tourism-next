@@ -1,21 +1,18 @@
-import type { NextPage } from "next";
-import Image from "next/image";
-import FadeIn from "react-fade-in";
 import { useState } from "react";
+import Image from "next/image";
+import type { NextPage } from "next";
+import FadeIn from "react-fade-in";
+
+import Navbar from "../../components/Navbar";
+import DestinationInformation from "../../components/DestinationInformation";
 
 import bgDesktop from "../../assets/destination/background-destination-desktop.jpg";
-import Navbar from "../../components/Navbar";
-
 import moon from "../../assets/destination/image-moon.webp";
 import europa from "../../assets/destination/image-europa.webp";
 import mars from "../../assets/destination/image-mars.webp";
 import titan from "../../assets/destination/image-titan.webp";
 
-import data from "../../api/data.json";
-
 import styles from "./styles.module.scss";
-
-import DestinationInformation from "../../components/DestinationInformation";
 
 const Destination: NextPage = () => {
   const [destinationState, useDestinationState] = useState("Moon");
