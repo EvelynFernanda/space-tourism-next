@@ -13,25 +13,24 @@
 .navbar_items {
   background-color: rgba(133, 129, 129, 0.308);
   display: flex;
-  padding: 2rem;
   justify-content: space-around;
   width: 60%;
 
-  & > li {
+  & li {
     font-size: 1rem;
     font-family: $sans;
     line-height: 19px;
     letter-spacing: 2.7px;
     transition: hover 0.5s;
-    & :hover{
-      border-bottom: 3px solid gray;
-    }
-    & :active{
-      border-bottom: 3px solid $light;
-    }
-    a{
-      padding: 1.9rem 0.5rem;
+    padding: 1.9rem 0.5rem;
+    border-bottom: 3px solid transparent;
+
+    &[aria-selected="true"]{
+      border-bottom: 3px solid #d0d6f9;
     }
 
   }
+}
+.navbar_items li:hover{
+  border-bottom: 3px solid gray;
 }
