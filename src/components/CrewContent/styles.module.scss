@@ -1,0 +1,40 @@
+@import "../../styles/variables.scss";
+
+.crewContent {
+  display: flex;
+  max-width: 1200px;
+  margin: auto;
+  align-items: center;
+  max-height: 90vh;
+  &_images {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+  &_description {
+    width: 60vw;
+    margin-bottom: 1rem;
+    h3 {
+      font-family: $serif;
+      color: rgb(125, 124, 124);
+      font-weight: 400;
+      font-size: 32px;
+      line-height: 37px;
+    }
+    h2 {
+      font-family: $serif;
+      font-weight: 400;
+      font-size: 56px;
+      line-height: 0;
+    }
+    p {
+      font-family: $sans;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 24px;
+      color: $blue-light;
+      max-width: 444px;
+    }
+  }
+
+}

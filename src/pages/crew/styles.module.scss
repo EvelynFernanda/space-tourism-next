@@ -1,0 +1,26 @@
+@import "../../styles/variables.scss";
+
+.crew {
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  &_container {
+    max-width: 90vw;
+    margin: auto;
+  }
+  &_content {
+    margin: 1rem auto 0;
+    min-height: 80vh;
+    h1 {
+      font-family: $sans;
+      font-size: 28px;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-weight: 400;
+      padding: 2rem 6rem 0;
+    }
+
+  
+  }
+}
+
