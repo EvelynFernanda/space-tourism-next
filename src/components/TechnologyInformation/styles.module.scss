@@ -1,0 +1,58 @@
+@import "../../styles/variables.scss";
+
+.technologyInformation {
+  display: flex;
+  &_nav {
+
+    &_button {
+      background: none;
+      transition: all 0.5s;
+      cursor: pointer;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 3rem 1.5rem 0;
+      font-size: 1.5rem;
+      line-height: 37px;
+      letter-spacing: 2px;
+      text-align: left;
+      border: 1px solid $gray-light;
+      color: $light;
+      &:hover {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+      }
+    }
+  }
+  &_content {
+    max-width: 27.75rem;
+    h2 {
+      font-family: $serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 50px;
+      line-height: 1rem;
+    }
+    h3 {
+      font-family: $sans;
+      color: $blue-light;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 32px;
+    }
+    p {
+      font-family: $sans;
+      color: $blue-light;
+      font-size: 1rem;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 0;
+      font-style: normal;
+      letter-spacing: 2.7px;
+    }
+  }
+}

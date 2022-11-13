@@ -1,0 +1,35 @@
+@import "../../styles/variables.scss";
+
+.technology {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  h1 {
+    margin: 2rem 0 0 13vw;
+    font-family: $sans;
+    font-size: 28px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 400;
+  }
+  &_container {
+    width: 100vw;
+    margin: 1rem auto 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 80%;
+  }
+  &_content {
+    display: flex;
+    justify-content: space-around;
+    width: 60vw;
+  }
+  &_imageContainer {
+    display: flex;
+    width: 40vw;
+    justify-content: flex-end;
+  }
+}
