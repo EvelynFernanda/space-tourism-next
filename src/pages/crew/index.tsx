@@ -1,6 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Mousewheel, Keyboard } from "swiper";
+import { Pagination, Navigation, Mousewheel, Keyboard } from "swiper";
 import "swiper/css/pagination";
+import "swiper/css/navigation";
 import "swiper/css";
 
 import data from "../../api/data.json";
@@ -26,9 +27,10 @@ export default function App() {
             <Swiper
               cssMode={true}
               pagination={{ clickable: true }}
+              navigation={true}
               mousewheel={true}
               keyboard={true}
-              modules={[Pagination, Mousewheel, Keyboard]}
+              modules={[Pagination, Navigation, Mousewheel, Keyboard]}
               className={styles.mySwiper}
             >
               {data.crew.map((crew) => (
