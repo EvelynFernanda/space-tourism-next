@@ -1,23 +1,46 @@
-import styles from "./styles.module.scss";
-import { useRouter } from 'next/router'
-import LogoSvg from "../../assets/shared/logo-svg.svg";
+import { useRouter } from "next/router";
 import Link from "next/link";
 
+import LogoSvg from "../../assets/shared/logo-svg.svg";
+
+import styles from "./styles.module.scss";
+
 const Navbar = () => {
-  const router = useRouter()
+  const router = useRouter();
+
+  const navContent = [
+    {
+      pathname: "/",
+      name: "HOME",
+    },
+    {
+      pathname: "/destination",
+      name: "DESTINATION",
+    },
+    {
+      pathname: "/crew",
+      name: "CREW",
+    },
+    {
+      pathname: "/technology",
+      name: "TECHNOLOGY",
+    },
+  ];
 
   return (
     <div className={styles.navbar_container}>
-    <LogoSvg />
+      <LogoSvg />
       <ul className={styles.navbar_items}>
-        <li aria-selected={router.pathname == '/' ? 'true' : 'false'}><Link href="/" >HOME</Link></li>
-        <li aria-selected={router.pathname == '/destination' ? 'true' : 'false'}><Link href="/destination/">DESTINATION</Link></li>
-        <li aria-selected={router.pathname == '/crew' ? 'true' : 'false'}><Link href="/crew/">CREW</Link></li>
-        <li aria-selected={router.pathname == '/technology' ? 'true' : 'false'}><Link href="/technology/">TECHNOLOGY</Link></li>
+        {navContent.map((nav) => (
+          <li
+            aria-selected={router.pathname == nav.pathname ? "true" : "false"}
+          >
+            <Link href={nav.pathname}>{nav.name}</Link>
+          </li>
+        ))}
       </ul>
     </div>
   );
 };
-// {router.pathname == '/destination/' ? 'true' : 'false'}
 
 export default Navbar;
