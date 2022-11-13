@@ -13,10 +13,10 @@
   }
   &_description {
     width: 60vw;
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
     h3 {
       font-family: $serif;
-      color: rgb(125, 124, 124);
+      color: $gray-light;
       font-weight: 400;
       font-size: 32px;
       line-height: 37px;
@@ -36,5 +36,4 @@
       max-width: 444px;
     }
   }
-
 }

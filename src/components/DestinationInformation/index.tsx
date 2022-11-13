@@ -2,14 +2,14 @@ import data from "../../api/data.json";
 
 import styles from "./styles.module.scss";
 
-export type destinationInformationType = {
+type destinationInformationType = {
   destinationState: string;
-  useDestinationState: (arg: string) => void;
+  setDestinationState: (arg: string) => void;
 };
 
 const DestinationInformation = ({
   destinationState,
-  useDestinationState,
+  setDestinationState,
 }: destinationInformationType) => {
   return (
     <div className={styles.destinationInformation}>
@@ -28,7 +28,7 @@ const DestinationInformation = ({
             }
             className={styles.destinationInformation_nav_button}
             value={destination.name}
-            onClick={(event) => useDestinationState(event.currentTarget.value)}
+            onClick={(event) => setDestinationState(event.currentTarget.value)}
           >
             {destination.name.toLocaleUpperCase()}
           </button>
@@ -46,12 +46,16 @@ const DestinationInformation = ({
           <h2>{destination.name.toUpperCase()}</h2>
           <h3>{destination.description}</h3>
           <div className={styles.destinationInformation_content_distance}>
-            <div className={styles.destinationInformation_content_distance_item}>
+            <div
+              className={styles.destinationInformation_content_distance_item}
+            >
               <h5>AVG. DISTANCE</h5>
               <p>{destination.distance}</p>
             </div>
-            <div className={styles.destinationInformation_content_distance_item}>
-            <h5>Est. travel time</h5>
+            <div
+              className={styles.destinationInformation_content_distance_item}
+            >
+              <h5>Est. travel time</h5>
               <p>{destination.travel}</p>
             </div>
           </div>

@@ -27,7 +27,7 @@ const Home: NextPage = () => {
           </p>
         </div>
         </FadeIn>
-        <ButtonPulse >EXPLORE</ButtonPulse>
+        <ButtonPulse>EXPLORE</ButtonPulse>
       </main>
     </div>
   );

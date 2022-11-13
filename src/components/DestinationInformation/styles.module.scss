@@ -20,7 +20,7 @@
       margin: 0 10px;
       border-bottom: 3px solid transparent;
       &:hover {
-        border-bottom-color: gray !important;
+        border-bottom-color: $gray-light !important;
       }
     }
   }
@@ -33,14 +33,14 @@
     }
     h3 {
       font-family: $sans;
-      color: #d0d6f9;
+      color: $blue-light;
       font-size: 1.125rem;
       line-height: 18px;
       letter-spacing: 2px;
       line-height: 25px;
       font-weight: 400;
       padding-bottom: 2.5rem;
-      border-bottom: 2px solid rgba(122, 121, 121, 0.289);
+      border-bottom: 2px solid ;
     }
     &_distance {
       display: flex;
@@ -57,7 +57,7 @@
         h5 {
           margin: 0;
           font-family: $sans;
-          color: #d0d6f9;
+          color: $blue-light;
           font-size: 1rem;
           line-height: 18px;
           letter-spacing: 2px;
