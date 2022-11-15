@@ -12,27 +12,62 @@
     justify-content: space-between;
     align-items: flex-end;
     height: 65%;
+    @media (max-width: 700px) {
+      flex-wrap: wrap;
+    }
   }
   &_content {
     max-width: 445px;
+    @media(max-width: 700px){
+      margin: auto;
+      padding: 3rem 0;
+    }
     h3 {
       font-family: $sans;
       font-size: 1.75rem;
       font-weight: 400;
       line-height: 34px;
       letter-spacing: 4.7px;
+      color: $blue-light;
+      @media (max-width: 700px) {
+        font-size: 16px;
+        line-height: 19px;
+        text-align: center;
+        letter-spacing: 2.7px;
+      }
     }
     h1 {
       font-family: $serif;
       font-weight: 400;
       font-size: 150px;
       line-height: 0rem;
+      @media (max-width: 700px) {
+        font-size: 80px;
+        text-align: center;
+        line-height: 1.5rem;
+      }
     }
-    p{
+    p {
       font-family: $sans;
       font-size: 1.25rem;
       line-height: 2rem;
       font-weight: 400;
+      color: $blue-light;
+      @media (max-width: 700px) {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 25px;
+        text-align: center;
+        max-width: 85vw;
+      }
+    }
+  }
+  &_buttonContainer{
+    @media(max-width: 700px){
+      width: 100vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   }
 }
