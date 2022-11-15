@@ -5,7 +5,10 @@
   height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
-  
+  @media (max-width: 700px) {
+    height: auto;
+  }
+
   &_container {
     flex-wrap: wrap;
     max-width: 1200px;
@@ -14,6 +17,9 @@
     justify-content: space-between;
     align-items: center;
     height: 80%;
+    @media (max-width: 700px) {
+      justify-content: center;
+    }
   }
   &_content {
     h1 {
@@ -23,6 +29,12 @@
       letter-spacing: 4px;
       font-weight: 400;
       margin-bottom: 4rem;
+      @media (max-width: 700px) {
+        font-size: 18px;
+        letter-spacing: 2.7px;
+        text-align: center;
+        margin-bottom: 2rem;
+      }
     }
   }
 }

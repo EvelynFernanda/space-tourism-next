@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
-import { FiMenu } from "react-icons/fi";
 
 import LogoSvg from "../../assets/shared/logo-svg.svg";
 
@@ -16,7 +15,6 @@ const Navbar = () => {
     const isMobile = window.innerWidth < 700;
     setMobile(isMobile);
   }, []);
-  console.log(mobile);
 
   const navContent = [
     {
