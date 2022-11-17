@@ -2,8 +2,13 @@
 
 .technologyInformation {
   display: flex;
+  @media (max-width: 700px) {
+    flex-direction: column;
+  }
   &_nav {
-
+    @media (max-width: 700px) {
+      display: flex;
+    }
     &_button {
       background: none;
       transition: all 0.5s;
@@ -25,6 +30,11 @@
         -webkit-transform: scale(1.1);
         transform: scale(1.1);
       }
+      @media (max-width: 700px) {
+        width: 3.75rem;
+        height: 3.75rem;
+        margin: 2rem 1rem;
+      }
     }
   }
   &_content {
@@ -35,6 +45,11 @@
       font-weight: 400;
       font-size: 50px;
       line-height: 1rem;
+      @media (max-width: 700px) {
+        line-height: normal;
+        text-align: center;
+        font-size: 24px;
+      }
     }
     h3 {
       font-family: $sans;
@@ -43,6 +58,11 @@
       font-weight: 400;
       font-size: 18px;
       line-height: 32px;
+      @media (max-width: 700px) {
+        text-align: center;
+      line-height: 26px;
+
+      }
     }
     p {
       font-family: $sans;
@@ -53,6 +73,9 @@
       line-height: 0;
       font-style: normal;
       letter-spacing: 2.7px;
+      @media (max-width: 700px) {
+        text-align: center;
+      }
     }
   }
 }
