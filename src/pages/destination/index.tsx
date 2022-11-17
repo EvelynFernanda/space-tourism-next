@@ -13,11 +13,9 @@ import mars from "../../assets/destination/image-mars.webp";
 import titan from "../../assets/destination/image-titan.webp";
 
 import styles from "./styles.module.scss";
-import { useRouter } from "next/router";
 
 const Destination: NextPage = () => {
   const [destinationState, setDestinationState] = useState("Moon");
-  const router = useRouter();
   const [mobile, setMobile] = useState(false);
 
   useEffect(() => {
