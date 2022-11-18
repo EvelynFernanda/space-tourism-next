@@ -12,7 +12,7 @@ import Layout from "../../components/Layout";
 import styles from "./styles.module.scss";
 import FadeIn from "react-fade-in";
 
-export default function App() {
+export default function Crew() {
   return (
     <div
       className={styles.crew}
