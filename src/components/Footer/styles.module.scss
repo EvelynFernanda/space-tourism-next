@@ -1,0 +1,14 @@
+@import "../../styles/variables.scss";
+
+.footer {
+  padding: 0.2rem;
+  bottom: 0;
+  width: 100vw;
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 14px;
+    color: $blue-light;
+  }
+}
