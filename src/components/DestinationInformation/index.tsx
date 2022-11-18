@@ -14,7 +14,7 @@ const DestinationInformation = ({
   return (
     <div className={styles.destinationInformation}>
       <div className={styles.destinationInformation_nav}>
-        {data.destinations.map((destination) => (
+        {data.destinations.map((destination, index) => (
           <button
             style={
               destinationState == destination.name
@@ -28,14 +28,16 @@ const DestinationInformation = ({
             }
             className={styles.destinationInformation_nav_button}
             value={destination.name}
+            key={index}
             onClick={(event) => setDestinationState(event.currentTarget.value)}
           >
             {destination.name.toLocaleUpperCase()}
           </button>
         ))}
       </div>
-      {data.destinations.map((destination) => (
+      {data.destinations.map((destination, index) => (
         <div
+          key={index}
           className={styles.destinationInformation_content}
           style={
             destinationState == destination.name

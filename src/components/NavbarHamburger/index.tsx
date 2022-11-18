@@ -29,8 +29,8 @@ const NavbarHamburger = ({ navContent }: navContentType) => {
         <div className={styles.navbarHamburger_container}>
           <AiOutlineClose className={styles.iconMenu} onClick={toggleOpen} />
           <ul className={styles.navbarHamburger_items}>
-            {navContent.map((nav) => (
-              <li>
+            {navContent.map((nav, index) => (
+              <li key={index}>
                 <Link href={nav.pathname}>{nav.name}</Link>
               </li>
             ))}

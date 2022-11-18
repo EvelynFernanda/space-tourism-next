@@ -43,8 +43,9 @@ const Navbar = () => {
         <div className={styles.navbar_container}>
           <LogoSvg className={styles.logo} />
           <ul className={styles.navbar_items}>
-            {navContent.map((nav) => (
+            {navContent.map((nav, index) => (
               <li
+                key={index}
                 aria-selected={
                   router.pathname == nav.pathname ? "true" : "false"
                 }

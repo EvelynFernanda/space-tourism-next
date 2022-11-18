@@ -17,6 +17,7 @@ const TechnologyInformation = ({
       <div className={styles.technologyInformation_nav}>
         {data.technology.map((technology, index) => (
           <button
+            key={index}
             aria-checked
             style={
               technologyState == technology.name.split(" ")[0]
@@ -37,8 +38,9 @@ const TechnologyInformation = ({
           </button>
         ))}
       </div>
-      {data.technology.map((technology) => (
+      {data.technology.map((technology, index) => (
         <div
+          key={index}
           className={styles.technologyInformation_content}
           style={
             technologyState == technology.name.split(" ")[0]

@@ -14,7 +14,6 @@ import styles from "./styles.module.scss";
 import FadeIn from "react-fade-in";
 
 export default function App() {
-
   return (
     <div
       className={styles.crew}
@@ -34,8 +33,8 @@ export default function App() {
               modules={[Pagination, Navigation, Mousewheel, Keyboard]}
               className={styles.mySwiper}
             >
-              {data.crew.map((crew) => (
-                <SwiperSlide>
+              {data.crew.map((crew, index) => (
+                <SwiperSlide key={index}>
                   <CrewContent crew={crew} />
                 </SwiperSlide>
               ))}

@@ -34,36 +34,44 @@ const Destination: NextPage = () => {
           <div className={styles.destination_content}>
             <h1>Pick your destination</h1>
             {destinationState == "Moon" && (
-              <Image
-                src={moon}
-                alt="moon"
-                height={mobile ? 200 : 420}
-                width={mobile ? 200 : 420}
-              />
+              <FadeIn>
+                <Image
+                  src={moon}
+                  alt="moon"
+                  height={mobile ? 200 : 420}
+                  width={mobile ? 200 : 420}
+                />
+              </FadeIn>
             )}
             {destinationState == "Mars" && (
-              <Image
-                src={mars}
-                alt="mars"
-                height={mobile ? 200 : 420}
-                width={mobile ? 200 : 420}
-              />
+              <FadeIn>
+                <Image
+                  src={mars}
+                  alt="mars"
+                  height={mobile ? 200 : 420}
+                  width={mobile ? 200 : 420}
+                />
+              </FadeIn>
             )}
             {destinationState == "Europa" && (
-              <Image
-                src={europa}
-                alt="europa"
-                height={mobile ? 200 : 420}
-                width={mobile ? 200 : 420}
-              />
+              <FadeIn>
+                <Image
+                  src={europa}
+                  alt="europa"
+                  height={mobile ? 200 : 420}
+                  width={mobile ? 200 : 420}
+                />
+              </FadeIn>
             )}
             {destinationState == "Titan" && (
-              <Image
-                src={titan}
-                alt="titan"
-                height={mobile ? 200 : 420}
-                width={mobile ? 200 : 420}
-              />
+              <FadeIn>
+                <Image
+                  src={titan}
+                  alt="titan"
+                  height={mobile ? 200 : 420}
+                  width={mobile ? 200 : 420}
+                />
+              </FadeIn>
             )}
           </div>
           <DestinationInformation
