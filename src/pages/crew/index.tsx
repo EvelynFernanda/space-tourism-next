@@ -1,4 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
+import useMobile from "../../hooks/useMobile";
 import { Pagination, Navigation, Mousewheel, Keyboard } from "swiper";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -13,6 +14,8 @@ import styles from "./styles.module.scss";
 import FadeIn from "react-fade-in";
 
 export default function Crew() {
+  const { isMobile } = useMobile();
+
   return (
     <div
       className={styles.crew}
@@ -22,7 +25,7 @@ export default function Crew() {
         <div className={styles.crew_container}>
           <FadeIn>
             <main className={styles.crew_content}>
-              <h1>Meet your crew</h1>
+            <h1 style={!isMobile ? {display: 'none'} : {display: 'block'}}>Meet your crew</h1>
               <Swiper
                 cssMode={true}
                 pagination={{ clickable: true }}

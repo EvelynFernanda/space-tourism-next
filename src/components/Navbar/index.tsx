@@ -1,20 +1,16 @@
-import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 
 import LogoSvg from "../../assets/shared/logo-svg.svg";
 
-import styles from "./styles.module.scss";
 import NavbarHamburger from "../NavbarHamburger";
+import useMobile from "../../hooks/useMobile";
+
+import styles from "./styles.module.scss";
 
 const Navbar = () => {
   const router = useRouter();
-  const [mobile, setMobile] = useState(false);
-
-  useEffect(() => {
-    const isMobile = window.innerWidth < 700;
-    setMobile(isMobile);
-  }, []);
+  const { isMobile } = useMobile();
 
   const navContent = [
     {
@@ -37,7 +33,7 @@ const Navbar = () => {
 
   return (
     <>
-      {mobile ? (
+      {isMobile ? (
         <NavbarHamburger navContent={navContent} />
       ) : (
         <div className={styles.navbar_container}>

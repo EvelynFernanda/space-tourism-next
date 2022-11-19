@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import useMobile from "../../hooks/useMobile";
 import Image from "next/image";
 
 import ImgDouglas from "../../assets/crew/image-douglas-hurley.png";
@@ -21,16 +21,14 @@ type crewContentType = {
 };
 
 const CrewContent = ({ crew }: crewContentType) => {
-  const [mobile, setMobile] = useState(false);
-
-  useEffect(() => {
-    const isMobile = window.innerWidth < 700;
-    setMobile(isMobile);
-  }, []);
+  const { isMobile } = useMobile();
 
   return (
     <div className={styles.crewContent}>
       <div className={styles.crewContent_description}>
+        <h1 style={isMobile ? { display: "none" } : { display: "block" }}>
+          Meet your crew
+        </h1>
         <h3>{crew.role.toUpperCase()}</h3>
         <h2>{crew.name.toUpperCase()}</h2>
         <p>{crew.bio}</p>
@@ -40,32 +38,32 @@ const CrewContent = ({ crew }: crewContentType) => {
           <Image
             src={ImgDouglas}
             alt="Douglas Hurley"
-            height={mobile ? 250 : 556}
-            width={mobile ? 250 : 453}
+            height={isMobile ? 250 : 556}
+            width={isMobile ? 250 : 453}
           />
         )}
         {crew.name == "Mark Shuttleworth" && (
           <Image
             src={ImgMark}
             alt="Mark Shuttleworth"
-            height={mobile ? 250 : 556}
-            width={mobile ? 250 : 453}
+            height={isMobile ? 250 : 556}
+            width={isMobile ? 250 : 453}
           />
         )}
         {crew.name == "Victor Glover" && (
           <Image
             src={ImgVictor}
             alt="Victor Glover"
-            height={mobile ? 250 : 556}
-            width={mobile ? 250 : 453}
+            height={isMobile ? 250 : 556}
+            width={isMobile ? 250 : 453}
           />
         )}
         {crew.name == "Anousheh Ansari" && (
           <Image
             src={ImgAnousheh}
             alt="Anousheh Ansari"
-            height={mobile ? 250 : 556}
-            width={mobile ? 250 : 453}
+            height={isMobile ? 250 : 556}
+            width={isMobile ? 250 : 453}
           />
         )}
       </div>

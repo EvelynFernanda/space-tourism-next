@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import useMobile from "../../hooks/useMobile";
 import Image from "next/image";
 import type { NextPage } from "next";
 import FadeIn from "react-fade-in";
@@ -19,12 +20,7 @@ import styles from "./styles.module.scss";
 
 const Technology: NextPage = () => {
   const [technologyState, setTechnologyState] = useState("Launch");
-  const [mobile, setMobile] = useState(false);
-
-  useEffect(() => {
-    const isMobile = window.innerWidth < 700;
-    setMobile(isMobile);
-  }, []);
+  const { isMobile } = useMobile();
 
   return (
     <div
@@ -44,17 +40,17 @@ const Technology: NextPage = () => {
 
             <div className={styles.technology_imageContainer}>
               {technologyState == data.technology[0].name.split(" ")[0] &&
-                mobile && <Image src={launchLand} alt="launch" />}
+                isMobile && <Image src={launchLand} alt="launch" />}
               {technologyState == data.technology[1].name.split(" ")[0] &&
-                mobile && <Image src={spaceportLand} alt="spaceport" />}
+                isMobile && <Image src={spaceportLand} alt="spaceport" />}
               {technologyState == data.technology[2].name.split(" ")[0] &&
-                mobile && <Image src={capsuleLand} alt="capsule" />}
+                isMobile && <Image src={capsuleLand} alt="capsule" />}
               {technologyState == data.technology[0].name.split(" ")[0] &&
-                !mobile && (
+                !isMobile && (
                   <Image src={launch} alt="launch" height={500} width={500} />
                 )}
               {technologyState == data.technology[1].name.split(" ")[0] &&
-                !mobile && (
+                !isMobile && (
                   <Image
                     src={spaceport}
                     alt="spaceport"
@@ -63,7 +59,7 @@ const Technology: NextPage = () => {
                   />
                 )}
               {technologyState == data.technology[2].name.split(" ")[0] &&
-                !mobile && (
+                !isMobile && (
                   <Image src={capsule} alt="capsule" height={500} width={500} />
                 )}
             </div>

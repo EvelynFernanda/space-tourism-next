@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import useMobile from "../../hooks/useMobile";
+import { useState } from "react";
 import type { NextPage } from "next";
 import Image from "next/image";
 import FadeIn from "react-fade-in";
@@ -15,12 +16,7 @@ import styles from "./styles.module.scss";
 
 const Destination: NextPage = () => {
   const [destinationState, setDestinationState] = useState("Moon");
-  const [mobile, setMobile] = useState(false);
-
-  useEffect(() => {
-    const isMobile = window.innerWidth < 700;
-    setMobile(isMobile);
-  }, []);
+  const { isMobile } = useMobile();
 
   return (
     <div
@@ -37,8 +33,8 @@ const Destination: NextPage = () => {
                   <Image
                     src={moon}
                     alt="moon"
-                    height={mobile ? 200 : 420}
-                    width={mobile ? 200 : 420}
+                    height={isMobile ? 200 : 420}
+                    width={isMobile ? 200 : 420}
                   />
                 </FadeIn>
               )}
@@ -47,8 +43,8 @@ const Destination: NextPage = () => {
                   <Image
                     src={mars}
                     alt="mars"
-                    height={mobile ? 200 : 420}
-                    width={mobile ? 200 : 420}
+                    height={isMobile ? 200 : 420}
+                    width={isMobile ? 200 : 420}
                   />
                 </FadeIn>
               )}
@@ -57,8 +53,8 @@ const Destination: NextPage = () => {
                   <Image
                     src={europa}
                     alt="europa"
-                    height={mobile ? 200 : 420}
-                    width={mobile ? 200 : 420}
+                    height={isMobile ? 200 : 420}
+                    width={isMobile ? 200 : 420}
                   />
                 </FadeIn>
               )}
@@ -67,8 +63,8 @@ const Destination: NextPage = () => {
                   <Image
                     src={titan}
                     alt="titan"
-                    height={mobile ? 200 : 420}
-                    width={mobile ? 200 : 420}
+                    height={isMobile ? 200 : 420}
+                    width={isMobile ? 200 : 420}
                   />
                 </FadeIn>
               )}
