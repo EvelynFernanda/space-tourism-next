@@ -1,10 +1,10 @@
 import useMobile from "../../hooks/useMobile";
 import Image from "next/image";
 
-import ImgDouglas from "../../assets/crew/image-douglas-hurley.png";
-import ImgAnousheh from "../../assets/crew/image-anousheh-ansari.png";
-import ImgMark from "../../assets/crew/image-mark-shuttleworth.png";
-import ImgVictor from "../../assets/crew/image-victor-glover.png";
+import ImgDouglas from "../../assets/crew/image-douglas-hurley.webp";
+import ImgAnousheh from "../../assets/crew/image-anousheh-ansari.webp";
+import ImgMark from "../../assets/crew/image-mark-shuttleworth.webp";
+import ImgVictor from "../../assets/crew/image-victor-glover.webp";
 
 import styles from "./styles.module.scss";
 

@@ -7,7 +7,7 @@ import FadeIn from "react-fade-in";
 import Layout from "../../components/Layout";
 import DestinationInformation from "../../components/DestinationInformation";
 
-import bgDesktop from "../../assets/destination/background-destination-desktop.jpg";
+import bgDesktop from "../../assets/destination/background-destination-desktop-min.jpg";
 import moon from "../../assets/destination/image-moon.webp";
 import europa from "../../assets/destination/image-europa.webp";
 import mars from "../../assets/destination/image-mars.webp";

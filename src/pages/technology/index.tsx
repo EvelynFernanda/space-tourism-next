@@ -8,13 +8,13 @@ import TechnologyInformation from "../../components/TechnologyInformation";
 import Layout from "../../components/Layout";
 import data from "../../api/data.json";
 
-import bgDesktop from "../../assets/technology/background-technology-desktop.jpg";
-import launch from "../../assets/technology/image-launch-vehicle-portrait.jpg";
-import launchLand from "../../assets/technology/image-launch-vehicle-landscape.jpg";
-import spaceport from "../../assets/technology/image-spaceport-portrait.jpg";
-import spaceportLand from "../../assets/technology/image-spaceport-landscape.jpg";
-import capsule from "../../assets/technology/image-space-capsule-portrait.jpg";
-import capsuleLand from "../../assets/technology/image-space-capsule-landscape.jpg";
+import bgDesktop from "../../assets/technology/background-technology-desktop-min.jpg";
+import launch from "../../assets/technology/image-launch-vehicle-portrait-min.jpg";
+import launchLand from "../../assets/technology/image-launch-vehicle-landscape-min.jpg";
+import spaceport from "../../assets/technology/image-spaceport-portrait-min.jpg";
+import spaceportLand from "../../assets/technology/image-spaceport-landscape-min.jpg";
+import capsule from "../../assets/technology/image-space-capsule-portrait-min.jpg";
+import capsuleLand from "../../assets/technology/image-space-capsule-landscape-min.jpg";
 
 import styles from "./styles.module.scss";
 

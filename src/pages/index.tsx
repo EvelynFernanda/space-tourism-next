@@ -1,10 +1,12 @@
 import type { NextPage } from "next";
-import bgDesktop from "../assets/home/background-home-desktop.jpg";
+import FadeIn from "react-fade-in";
+
+import Layout from "../components/Layout";
+import ButtonPulse from "../components/ButtonPulse";
+
+import bgDesktop from "../assets/home/background-home-desktop-min.jpg";
 
 import styles from "./styles.module.scss";
-import ButtonPulse from "../components/ButtonPulse";
-import FadeIn from "react-fade-in";
-import Layout from "../components/Layout";
 
 const Home: NextPage = () => {
   return (

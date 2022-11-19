@@ -7,7 +7,7 @@ import "swiper/css";
 
 import data from "../../api/data.json";
 import CrewContent from "../../components/CrewContent";
-import bgDesktop from "../../assets/crew/background-crew-desktop.jpg";
+import bgDesktop from "../../assets/crew/background-crew-desktop-min.jpg";
 import Layout from "../../components/Layout";
 
 import styles from "./styles.module.scss";
