@@ -17,7 +17,7 @@ Desafio criado por:
 
 ---
 
-### 🚀 ​ [Clique aqui](https://space-tourism-six-beta.vercel.app/technology)🔗 e veja como ficou.
+### 🚀 ​ [Clique aqui](https://space-tourism-six-beta.vercel.app/)🔗 e veja como ficou.
 
 
 #### 💬 Sinta-se a vontade para entrar em contato
