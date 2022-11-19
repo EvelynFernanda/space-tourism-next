@@ -12,12 +12,13 @@ const DestinationInformation = ({
   setDestinationState,
 }: destinationInformationType) => {
   return (
+    
     <div className={styles.destinationInformation}>
       <div className={styles.destinationInformation_nav}>
         {data.destinations.map((destination, index) => (
           <button
             style={
-              destinationState == destination.name
+              destinationState === destination.name
                 ? {
                     borderBottomColor: "white",
                   }

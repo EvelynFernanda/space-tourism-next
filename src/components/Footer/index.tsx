@@ -1,4 +1,3 @@
-import Link from "next/link";
 import styles from "./styles.module.scss";
 
 const Footer = () => {
@@ -9,10 +8,8 @@ const Footer = () => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        {" "}
         <p>
-          {" "}
-          Criado por <strong>Evelyn Cardoso</strong> - 2022
+          Created by <strong>Evelyn Cardoso</strong> - 2022
         </p>
       </a>
     </footer>

@@ -1,10 +1,11 @@
 import { useState } from "react";
+import Link from "next/link";
+
 import { FiMenu } from "react-icons/fi";
 import { AiOutlineClose } from "react-icons/ai";
 import LogoSvg from "../../assets/shared/logo-svg.svg";
 
 import styles from "./styles.module.scss";
-import Link from "next/link";
 
 type navContentType = {
   navContent: {
